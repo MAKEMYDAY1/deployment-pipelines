@@ -25,6 +25,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v7
         with:
-          context: /home/oodwyno/mooc/material-applications/express-app
+          context: .
           push: true
           tags: makemyday1/app:v1
