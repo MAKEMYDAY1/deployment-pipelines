@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: makemyday1/app:v1
+          tags: makemyday1/app:latest
