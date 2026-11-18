@@ -1,0 +1,13 @@
+services:
+  app:
+    image: makemyday1/app:latest
+    ports:
+      - 8080:8080
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    container_name: myapp
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30 myapp
